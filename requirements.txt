@@ -1,0 +1,40 @@
+# Titanic Survival Predictor (Kaggle-style project)
+
+This project contains:
+- a machine learning model saved in `joblib`
+- a Streamlit web app
+- files ready for deployment on Streamlit Community Cloud
+
+## Files
+- `app.py` — Streamlit app
+- `train_model.py` — model training script
+- `model.joblib` — saved model artifact
+- `requirements.txt` — Python dependencies
+- `data/demo_titanic.csv` — local demo dataset
+
+## Important note
+This package is structured for the **Kaggle Titanic** dataset. If you want the final version to be trained on the real Kaggle data, download Titanic `train.csv` from Kaggle and place it in the `data/` folder, then run:
+
+```bash
+python train_model.py
+```
+
+The script will automatically prefer `data/train.csv` over the demo dataset.
+
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Deploy on Streamlit Community Cloud
+1. Upload this project to a GitHub repository.
+2. Open Streamlit Community Cloud.
+3. Click **Create app**.
+4. Select your GitHub repository.
+5. Set the main file path to `app.py`.
+6. Click **Deploy**.
+7. After deployment, copy your public app URL.
+
+## Suggested repository name
+`titanic-streamlit-app`
